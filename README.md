@@ -1,6 +1,4 @@
-# France_Data
-
-# france_data
+# France Data
 
 API Découpage Administratif - (API Geo) <br>
 https://api.gouv.fr/documentation/api-geo <br>
