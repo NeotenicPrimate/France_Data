@@ -3,7 +3,7 @@ use juniper::{FieldResult, graphql_object};
 use serde_json::{Value};
 
 use crate::database::Context;
-use crate::models::departement::Departement;
+use crate::models::{departement::Departement, country::Country};
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Region {
@@ -20,6 +20,19 @@ impl Region {
 
     fn code(&self) -> &String {
         &self.code
+    }
+
+    async fn code_country(&self, context: &Context) -> FieldResult<Country> {
+
+        let data = reqwest::get("https://restcountries.eu/rest/v2/alpha/FRA")
+            .await.expect("Error")
+            .text()
+            .await.expect("Error");
+
+        let country: Country = serde_json::from_str(data.as_str()).expect("json-string to departement struct");
+
+        Ok(country)
+
     }
 
     async fn code_departements(&self, context: &Context) -> FieldResult<Vec<Departement>> {

@@ -11,8 +11,6 @@ pub struct Departement {
   pub code: String,
   #[serde(rename = "codeRegion")]
   pub code_region: Option<String>,
-  #[serde(skip)]
-  pub code_communes: Vec<String>,
 }
 
 #[graphql_object(context = Context)]

@@ -1,7 +1,7 @@
 use juniper::{RootNode, EmptyMutation, EmptySubscription, graphql_object};
 
 use crate::database::Context;
-use crate::models::{region::Region, commune::Commune, departement::Departement};
+use crate::models::{region::Region, commune::Commune, departement::Departement, country::Country};
 
 pub struct Query;
 
@@ -57,6 +57,29 @@ impl Query {
 
         departement
     }
+
+    async fn country() -> Country {
+        let data = reqwest::get("https://restcountries.eu/rest/v2/alpha/FRA")
+            .await.expect("Error")
+            .text()
+            .await.expect("Error");
+
+        let country: Country = serde_json::from_str(data.as_str()).expect("json string to country struct");
+
+        country
+    }
+    
+    async fn countries() -> Vec<Country> {
+        let data = reqwest::get("https://restcountries.eu/rest/v2/all")
+            .await.expect("Error")
+            .text()
+            .await.expect("Error");
+
+        let countries: Vec<Country> = serde_json::from_str(data.as_str()).expect("json string to country struct");
+
+        countries
+    }
+
 
 }
 
