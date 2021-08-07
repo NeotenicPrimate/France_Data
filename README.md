@@ -15,4 +15,6 @@ https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-referentie
 Installations de production de la filière "Hydraulique" par commune <br>
 https://opendata.agenceore.fr/explore/dataset/installations-de-production-hydraulique-par-commune/api/?refine.1_f_code_insee_pdl=52500 <br>
 <br>
-
+Contours des communes de France simplifié, avec régions et département d'outre-mer rapprochés <br>
+https://www.data.gouv.fr/en/datasets/contours-des-communes-de-france-simplifie-avec-regions-et-departement-doutre-mer-rapproches/ <br>
+<br>
