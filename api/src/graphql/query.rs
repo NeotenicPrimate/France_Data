@@ -1,4 +1,4 @@
-use juniper::{RootNode, EmptyMutation, EmptySubscription, graphql_object};
+use juniper::graphql_object;
 
 use crate::database::Context;
 use crate::models::{region::Region, commune::Commune, departement::Departement, country::Country};
@@ -81,14 +81,4 @@ impl Query {
     }
 
 
-}
-
-pub type Schema = RootNode<'static, Query, EmptyMutation<Context>, EmptySubscription<Context>>;
-
-pub fn create_schema() -> Schema {
-    Schema::new(
-        Query,
-        EmptyMutation::<Context>::new(),
-        EmptySubscription::<Context>::new(),
-    )
 }

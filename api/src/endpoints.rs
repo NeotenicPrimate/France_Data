@@ -1,4 +1,4 @@
-use crate::graphql::{Schema};
+use crate::graphql::schema::{Schema};
 use actix_web::{web, Error, HttpResponse};
 use juniper_actix::{graphiql_handler, graphql_handler, playground_handler};
 use crate::database::Context;

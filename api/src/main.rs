@@ -15,7 +15,7 @@ use actix_web::{
     App, HttpServer,
 };
 
-use graphql::{create_schema};
+use graphql::schema::{create_schema};
 use endpoints::{graphql_route, playground_route, graphiql_route};
 
 #[actix_web::main]
