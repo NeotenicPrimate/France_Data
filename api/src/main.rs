@@ -4,6 +4,7 @@ mod models;
 mod database;
 mod graphql;
 mod endpoints;
+mod data_types;
 
 use std::env;
 

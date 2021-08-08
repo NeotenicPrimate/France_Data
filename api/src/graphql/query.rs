@@ -58,8 +58,8 @@ impl Query {
         departement
     }
 
-    async fn country() -> Country {
-        let data = reqwest::get("https://restcountries.eu/rest/v2/alpha/FRA")
+    async fn country(id: String) -> Country {
+        let data = reqwest::get(format!("https://restcountries.eu/rest/v2/alpha/{}", id).as_str())
             .await.expect("Error")
             .text()
             .await.expect("Error");
