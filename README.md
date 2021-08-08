@@ -21,3 +21,6 @@ https://www.data.gouv.fr/en/datasets/contours-des-communes-de-france-simplifie-a
 REST Countries<br>
 https://restcountries.eu/ <br>
 <br>
+Persons in the unemployment halo - Inactive persons, available for work but not actively looking for a job (in thousands) - France excluding Mayotte - SA data <br>
+https://www.insee.fr/en/statistiques/serie/010605048 <br>
+<br>
