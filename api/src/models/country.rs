@@ -1,12 +1,12 @@
 use juniper::{graphql_object, FieldResult};
 use serde::{Serialize, Deserialize};
 use reqwest::header::{HeaderMap};
-use html_parser::{Dom};
+use scraper::{Html, Selector};
 use serde_json::{Value};
 
 use crate::database::Context;
 use crate::models::{region::Region};
-use crate::data_types::{time_series::{TimeSeriesDataPoint}};
+use crate::data_types::{time_series::{TimeSeriesDataPoint, request_insee_bdm}};
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Country {
@@ -45,36 +45,31 @@ impl Country {
         }
     }
 
-    async fn chommage(&self) -> FieldResult<Option<Vec<TimeSeriesDataPoint>>> {
+    /// Personnes dans le halo autour du chômage - Inactifs faisant des démarches actives de recherche d'emploi mais non disponibles (en milliers) - France hors Mayotte - Données CVS
+    /// INSEE Identifiant 010605048
+    async fn inactive_cherchant_emploi(&self) -> FieldResult<Option<Vec<TimeSeriesDataPoint>>> {
           
-        let client = reqwest::Client::new();
-        
-        let mut headers = HeaderMap::new();
-        headers.insert("accept", "application/xml".parse().unwrap());
-        headers.insert("authorization", "Bearer af7bbf6c-4392-3726-90f1-6959447492ba".parse().unwrap());
-    
-        let data = client
-            .get("https://api.insee.fr/series/BDM/V1/data/SERIES_BDM/010605048")
-            .headers(headers)
-            .send()
-            .await.expect("Error 1")
-            .text()
-            .await.expect("Error 2");
-    
-        let json_string = Dom::parse(data.as_str()).expect("parse").to_json().expect("to json");
-        let root: Value = serde_json::from_str(&json_string).expect("deserialize");
-    
-        let children0 = root.get("children").expect("no records");
-        let children1 = children0[0].get("children").expect("key does not exist");
-        let children2 = children1[1].get("children").expect("key does not exist");
-        let children3 = children2[0].get("children").expect("key does not exist");
-    
-        let mut time_series = Vec::new();
-        for obs in children3.as_array().expect("array") {
-            let data_point: TimeSeriesDataPoint = serde_json::from_value(obs["attributes"].to_owned()).expect("json string to Datapoint");
-            time_series.push(data_point);
-        };
+        let time_series = request_insee_bdm("010605048").await;
 
+        Ok(Some(time_series))
+
+    }
+
+    /// Situation mensuelle du budget de l'État - Solde général d'exécution - Cumul depuis le début de l'année
+    /// INSEE Identifiant 001717255
+    async fn solde_general_dexectution_mensuel_etat() -> FieldResult<Option<Vec<TimeSeriesDataPoint>>> { 
+
+        let time_series = request_insee_bdm("001717255").await;
+        
+        Ok(Some(time_series))
+    }
+
+    /// Situation mensuelle du budget de l'État - Dépenses - Cumul depuis le début de l'année
+    /// Identifiant 001717256
+    async fn depenses_mensuelles_etat() -> FieldResult<Option<Vec<TimeSeriesDataPoint>>> {
+
+        let time_series = request_insee_bdm("001717256").await;
+        
         Ok(Some(time_series))
 
     }
@@ -86,7 +81,7 @@ impl Country {
             .text()
             .await?;
 
-        let regions: Vec<Region> = serde_json::from_str(data.as_str()).expect("json string to region struct");
+        let regions: Vec<Region> = serde_json::from_str(data.as_str())?;
 
         Ok(Some(regions))
 
