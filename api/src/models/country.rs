@@ -32,17 +32,11 @@ impl Country {
     }
 
     async fn population(&self) -> Option<i32> {
-        match self.population {
-            Some(value) => Some(value),
-            None => None,
-        }
+        self.population
     }
 
     async fn gini(&self) -> Option<f64> {
-        match self.gini {
-            Some(value) => Some(value),
-            None => None,
-        }
+        self.gini
     }
 
     /// Personnes dans le halo autour du chômage - Inactifs faisant des démarches actives de recherche d'emploi mais non disponibles (en milliers) - France hors Mayotte - Données CVS
@@ -62,6 +56,7 @@ impl Country {
         let time_series = request_insee_bdm("001717255").await;
         
         Ok(Some(time_series))
+        
     }
 
     /// Situation mensuelle du budget de l'État - Dépenses - Cumul depuis le début de l'année
@@ -74,6 +69,8 @@ impl Country {
 
     }
 
+    // TODO: find link between Countries and their Regions
+    /// 
     async fn code_regions() -> FieldResult<Option<Vec<Region>>> {
 
         let data = reqwest::get("https://geo.api.gouv.fr/regions")
