@@ -12,16 +12,18 @@ https://www.insee.fr/en/statistiques/serie/010605048 <br>
 ## World Bank
 ![Alt text](/img/world_bank.png?raw=true "World Bank")
 
-Variables:<br>
+Indicator search:<br>
 https://data.worldbank.org/<br>
 
-GDP ($US):<br>
+So far, these indicators have been included: <br>
+• GDP ($US):<br>
 https://data.worldbank.org/indicator/NY.GDP.MKTP.CD<br>
 
 ## OECD
 ![Alt text](/img/oecd.png?raw=true "OECD")
 
 ## Open Data
+![Alt text](/img/open_data.png?raw=true "Opendata")
 
 Consommation annuelle d’électricité et gaz par commune et par secteur d’activité <br>
 https://opendata.agenceore.fr/explore/dataset/conso-elec-gaz-annuelle-par-secteur-dactivite-agregee-commune/table/ <br>
