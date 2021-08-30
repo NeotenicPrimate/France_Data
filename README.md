@@ -59,7 +59,7 @@ https://www.data.gouv.fr/en/datasets/contours-des-communes-de-france-simplifie-a
 <br>
 
 ## World Inequality Database
-<img src="/img/wid.png" width="150" height="150">
+<img src="/img/wid.jpg" width="150" height="150">
 
 No API as of yet.
 
