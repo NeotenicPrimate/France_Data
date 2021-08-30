@@ -4,6 +4,16 @@ use reqwest::header::{HeaderMap};
 use scraper::{Html, Selector};
 use serde_json::{Value};
 
+// RP Recensement de la population 1999, de 2006 à 2018
+// BDCOM Séries historiques du recensement de la population (depuis 1968) de 2012 à 2018
+// Popleg Populations légales (issue du recensement de la population) de 2006 à 2018
+// RFD Données de l'état-civil (naissances et décès) de 2007 à 2019
+// REE Répertoire des entreprises et des établissements (issu de Sirene) de 2009 à 2020
+// FILOSOFI Fichier localisé social et scal 2017 et 2018
+// Flores Fichier localisé des rémunérations et de l'emploi salarié 2017 et 2018
+// TOUR Tourisme (ore d'hébergement) de 2013 à 2021
+
+
 #[derive(Serialize, Deserialize, GraphQLObject, Debug)]
 pub struct TimeSeriesDataPoint {
     obs_qual: Option<String>,

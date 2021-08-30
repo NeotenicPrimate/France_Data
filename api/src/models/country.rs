@@ -6,7 +6,10 @@ use serde_json::{Value};
 
 use crate::database::Context;
 use crate::models::{region::Region};
-use crate::data_types::{time_series::{TimeSeriesDataPoint, request_insee_bdm}};
+use crate::data_types::{
+    insee_time_series::{TimeSeriesDataPoint, request_insee_bdm},
+    world_bank::{request_world_bank}
+};
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Country {
@@ -70,7 +73,6 @@ impl Country {
     }
 
     // TODO: find link between Countries and their Regions
-    /// 
     async fn code_regions() -> FieldResult<Option<Vec<Region>>> {
 
         let data = reqwest::get("https://geo.api.gouv.fr/regions")
@@ -82,5 +84,16 @@ impl Country {
 
         Ok(Some(regions))
 
+    }
+
+    /// GDP (current US$)
+    async fn gdp(&self) -> FieldResult<Option<f64>> {
+        let country_code = &self.alpha2Code;
+        let variables = vec!["NY", "GDP", "MKTP", "CD"];
+        let date = vec![2020];
+    
+        let value = request_world_bank(country_code, variables, date).await;
+        
+        Ok(value)
     }
 }
