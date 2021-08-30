@@ -23,7 +23,8 @@ https://data.worldbank.org/indicator/NY.GDP.MKTP.CD<br>
 <img src="/img/oecd.png" width="150" height="150">
 
 ## Open Data
-<img src="/img/open_data.png" width="150" height="150">
+170 × 49
+<img src="/img/open_data.png" width="49" height="170">
 
 Consommation annuelle d’électricité et gaz par commune et par secteur d’activité <br>
 https://opendata.agenceore.fr/explore/dataset/conso-elec-gaz-annuelle-par-secteur-dactivite-agregee-commune/table/ <br>
