@@ -80,6 +80,12 @@ Contours des communes de France simplifié, avec régions et département d'outr
 https://www.data.gouv.fr/en/datasets/contours-des-communes-de-france-simplifie-avec-regions-et-departement-doutre-mer-rapproches/ <br>
 <br>
 
+## OpenDataSoft
+<img src="/img/ods.jpg" width="150" height="83">
+
+Documentation: <br>
+https://public.opendatasoft.com/api/v1/console/datasets/1.0/search/ <br>
+
 ## World Inequality Database
 <img src="/img/wid.jpg" width="150" height="150">
 
