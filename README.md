@@ -10,7 +10,7 @@ https://www.insee.fr/en/statistiques/serie/010605048 <br>
 <br>
 
 ## World Bank
-![Alt text](/img/world_bank.png?raw=true "World Bank")
+![Alt text](/img/world_bank.png?raw=true "World Bank" =150x150)
 
 Indicator search:<br>
 https://data.worldbank.org/<br>
