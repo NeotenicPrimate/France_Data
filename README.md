@@ -1,5 +1,5 @@
 ## INSEE
-![Alt text](/img/insee.png?raw=true "INSEE")
+<img src="/img/insee.png" width="150" height="150">
 
 Populations légales 2017: Recensement de la population Régions, départements, arrondissements, cantons et communes <br>
 https://www.insee.fr/fr/statistiques/4265429?sommaire=4265511 <br>
@@ -10,7 +10,7 @@ https://www.insee.fr/en/statistiques/serie/010605048 <br>
 <br>
 
 ## World Bank
-![Alt text](/img/world_bank.png?raw=true "World Bank" =150x150)
+<img src="/img/world_bank.png" width="150" height="150">
 
 Indicator search:<br>
 https://data.worldbank.org/<br>
@@ -20,10 +20,10 @@ So far, these indicators have been included: <br>
 https://data.worldbank.org/indicator/NY.GDP.MKTP.CD<br>
 
 ## OECD
-![Alt text](/img/oecd.png?raw=true "OECD")
+<img src="/img/oecd.png" width="150" height="150">
 
 ## Open Data
-![Alt text](/img/open_data.png?raw=true "Opendata")
+<img src="/img/open_data.png" width="150" height="150">
 
 Consommation annuelle d’électricité et gaz par commune et par secteur d’activité <br>
 https://opendata.agenceore.fr/explore/dataset/conso-elec-gaz-annuelle-par-secteur-dactivite-agregee-commune/table/ <br>
@@ -42,7 +42,7 @@ https://www.data.gouv.fr/en/datasets/contours-des-communes-de-france-simplifie-a
 <br>
 
 ## data.gouv.fr
-![Alt text](/img/data_fr.png?raw=true "data.gouv.fr")
+<img src="/img/data_fr.png" width="150" height="150">
 
 • GeoZones <br>
 https://doc.data.gouv.fr/api/reference/#/spatial/spatial_zone <br>
