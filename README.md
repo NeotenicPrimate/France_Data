@@ -1,3 +1,14 @@
+## data.gouv.fr
+<img src="/img/data_fr.png" width="150" height="150">
+
+• GeoZones <br>
+https://doc.data.gouv.fr/api/reference/#/spatial/spatial_zone <br>
+<br>
+
+API Découpage Administratif - (API Geo) <br>
+https://api.gouv.fr/documentation/api-geo <br>
+<br>
+
 ## INSEE
 <img src="/img/insee.png" width="150" height="150">
 
@@ -22,6 +33,12 @@ https://data.worldbank.org/indicator/NY.GDP.MKTP.CD<br>
 ## OECD
 <img src="/img/oecd.png" width="150" height="150">
 
+Datasets with API: <br>
+https://data.oecd.org/searchresults/?hf=20&b=0&r=f/type/datasets/api+access&l=en <br>
+
+URL building (variables): <br>
+https://stats.oecd.org/restsdmx/sdmx.ashx/GetDataStructure/[dataset identifier] (e.g. QNA)<br>
+
 ## Open Data
 <img src="/img/open_data.png" width="170" height="49">
 
@@ -41,16 +58,10 @@ Contours des communes de France simplifié, avec régions et département d'outr
 https://www.data.gouv.fr/en/datasets/contours-des-communes-de-france-simplifie-avec-regions-et-departement-doutre-mer-rapproches/ <br>
 <br>
 
-## data.gouv.fr
-<img src="/img/data_fr.png" width="150" height="150">
+## World Inequality Database
+<img src="/img/wid.png" width="150" height="150">
 
-• GeoZones <br>
-https://doc.data.gouv.fr/api/reference/#/spatial/spatial_zone <br>
-<br>
-
-API Découpage Administratif - (API Geo) <br>
-https://api.gouv.fr/documentation/api-geo <br>
-<br>
+No API as of yet.
 
 ## Rest Countries
 
