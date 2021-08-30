@@ -1,6 +1,5 @@
-# France Data
-
 ## INSEE
+![Alt text](/img/insee.png?raw=true "INSEE")
 
 Populations légales 2017: Recensement de la population Régions, départements, arrondissements, cantons et communes <br>
 https://www.insee.fr/fr/statistiques/4265429?sommaire=4265511 <br>
@@ -11,8 +10,17 @@ https://www.insee.fr/en/statistiques/serie/010605048 <br>
 <br>
 
 ## World Bank
+![Alt text](/img/world_bank.png?raw=true "World Bank")
+
+Variables:<br>
+https://data.worldbank.org/<br>
+
+GDP ($US):<br>
+https://data.worldbank.org/indicator/NY.GDP.MKTP.CD<br>
+
 ## OECD
-## France Data
+![Alt text](/img/oecd.png?raw=true "OECD")
+
 ## Open Data
 
 Consommation annuelle d’électricité et gaz par commune et par secteur d’activité <br>
@@ -32,6 +40,7 @@ https://www.data.gouv.fr/en/datasets/contours-des-communes-de-france-simplifie-a
 <br>
 
 ## data.gouv.fr
+![Alt text](/img/data_fr.png?raw=true "data.gouv.fr")
 
 • GeoZones <br>
 https://doc.data.gouv.fr/api/reference/#/spatial/spatial_zone <br>
